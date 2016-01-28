@@ -4,14 +4,6 @@ import twitterHandler from './twitterHandler';
 import config from '../config.json';
 
 
-
-console.log('Starting')
 const twitterHandle = new twitterHandler(config);
 
-
-twitterHandle.on('newTweet', tweet => console.log(tweet));
-
-
-(function wait() {
-	setTimeout(wait, 1000);
-})();
+twitterHandle.emitter.on('newTweet', tweet => console.log(tweet));

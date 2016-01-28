@@ -22,13 +22,10 @@ class TwitterHandler extends Twitter {
 		this.mostRecentTweet = {};
 
 		this.watcher = setInterval(() => this.pollTwitter(account), interval);
-		this.pollTwitter(account)
-
-		return this.emitter;
+		this.pollTwitter(account);
 	}
 
 	pollTwitter(account) {
-
 		this.get('statuses/user_timeline', {
 			screen_name: account,
 			trim_user: true,
