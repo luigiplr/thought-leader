@@ -27,11 +27,7 @@ module.exports = function(grunt) {
             }
         },
         nodemon: {
-            script: 'thoughtleader.js',
-            options: {
-                cwd: 'build',
-                delay: 200
-            }
+            script: 'build/thoughtLeader.js'
         },
         concurrent: {
             run: {

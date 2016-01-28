@@ -17,14 +17,17 @@ class TwitterHandler extends Twitter {
 	}) {
 		super(arguments);
 
+		console.log(this)
+
 		this.emitter = new EventEmitter();
 		this.mostRecentTweet = {};
-		this.watchTweets = setInterval(this.pollTwitter.bind(this, account), interval);
+
+		this.pollTwitter(account)
 
 		return this.emitter;
 	}
 
-	pollTwitter() {
+	pollTwitter(account) {
 		this.stream('statuses/user_timeline', {
 			screen_name: account,
 			trim_user: true,
