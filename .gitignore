@@ -1,0 +1,19 @@
+# Windows
+.DS_Store
+.swp
+
+# Cache
+cache
+
+# Tests
+.test
+
+# IDEs
+.idea
+
+# Node
+node_modules
+npm-debug.log
+
+# Project
+build
