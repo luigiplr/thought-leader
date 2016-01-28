@@ -10,3 +10,8 @@ const twitterHandle = new twitterHandler(config);
 
 
 twitterHandle.on('newTweet', tweet => console.log(tweet));
+
+
+(function wait() {
+	setTimeout(wait, 1000);
+})();
